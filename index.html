@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div id="canvas"></div>
+    <script>
+      canvas.onclick = e => {
+        var x = e.clientX;
+        var y = e.clientY;
+        //开始新建标签
+        let div = document.createElement("div");
+        div.style.position = "absolute";
+        div.style.left = e.clientX + "px";
+        div.style.top = e.clientY + "px";
+        div.style.border = "1px solid red ";
+        div.style.width = "10px";
+        div.style.height = "10px";
+        div.style.marginLeft = "-3px";
+        div.style.marginTop = "-3px";
+        div.style.borderRadius = "50%";
+        div.style.backgroundColor = "red";
+        canvas.appendChild(div);
+      };
+    </script>
+  </body>
 </html>
